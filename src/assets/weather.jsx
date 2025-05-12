@@ -14,17 +14,17 @@ function Weather() {
 
   const getWeather = async () => {
     if (!city) {
-      setError("Введите название города");
+      setError("Enter a city name!");
       return;
     }
 
     try {
       setError(null); // Очистить ошибки при новом запросе
-      const apiUrl = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
+      const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
 
       const response = await fetch(apiUrl);
       if (!response.ok) {
-        throw new Error("Невозможно получить данные");
+        throw new Error("No data found for this city!");
       }
 
       const data = await response.json();
