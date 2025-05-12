@@ -3,7 +3,7 @@ import { Telegraf } from 'telegraf';
 const bot = new Telegraf('7912158076:AAHClxRiNqxP8l0plBK19BhJSrna1RpzWik'); // Токен твоего бота
 
 // URL мини-аппа
-const webAppUrl = 'http://localhost:5173/';
+const webAppUrl = 'https://weather-five-sage.vercel.app/';
 
 // Обработка команды /start
 bot.start((ctx) => {
